@@ -24,15 +24,15 @@ A React.js application that dynamically generates forms from JSON configuration 
 1. Clone or download the project
 2. Install dependencies:
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 3. Run the development server:
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
@@ -42,7 +42,7 @@ npm run dev
 
 Create a form by providing a JSON configuration object:
 
-\`\`\`javascript
+```javascript
 const formConfig = {
 title: "User Registration",
 fields: [
@@ -70,7 +70,7 @@ type: "checkbox"
 }
 ]
 }
-\`\`\`
+```
 
 ### Supported Field Types
 
@@ -86,7 +86,7 @@ type: "checkbox"
 
 For select fields, provide an options array:
 
-\`\`\`javascript
+```javascript
 {
 label: "Country",
 name: "country",
@@ -98,7 +98,7 @@ options: [
 { value: "uk", label: "United Kingdom" }
 ]
 }
-\`\`\`
+```
 
 ## Architecture
 
@@ -133,13 +133,32 @@ The form builder includes comprehensive validation:
 
 ### Adding New Field Types
 
-1. Add the new type to the \`FormFieldConfig\` type
-2. Implement the field rendering logic in \`FormField\` component
-3. Add any specific validation logic in \`useFormValidation\` hook
+1. Add the new type to the `FormFieldConfig` type
+2. Implement the field rendering logic in `FormField` component
+3. Add any specific validation logic in `useFormValidation` hook
 
 ### Styling
 
-The application uses Tailwind CSS for styling.
+The application uses Tailwind CSS for styling. Customize the appearance by modifying the Tailwind classes in the components.
+
+## Project Structure
+
+```
+├── app/
+│ ├── page.tsx
+│ └── layout.tsx
+├── components/
+│ ├── dynamic-form.tsx
+│ ├── form-field.tsx
+│ └── ui/ 
+├── hooks/
+│ ├── use-form-state.ts
+│ └── use-form-validation.ts
+├── types/
+│ └── form-types.ts
+└── README.md
+```
+
 
 ## Technical Decisions
 
@@ -166,4 +185,3 @@ The application uses Tailwind CSS for styling.
 - Full type safety for form configurations and data
 - Interfaces designed for extensibility
 - Type-safe field rendering and validation
-\`\`\`
