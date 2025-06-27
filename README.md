@@ -139,25 +139,7 @@ The form builder includes comprehensive validation:
 
 ### Styling
 
-The application uses Tailwind CSS for styling. Customize the appearance by modifying the Tailwind classes in the components.
-
-## Project Structure
-
-\`\`\`
-├── app/
-│ ├── page.tsx # Main application page
-│ └── layout.tsx # Root layout
-├── components/
-│ ├── dynamic-form.tsx # Main form component
-│ ├── form-field.tsx # Individual field component
-│ └── ui/ # Reusable UI components
-├── hooks/
-│ ├── use-form-state.ts # Form state management hook
-│ └── use-form-validation.ts # Form validation hook
-├── types/
-│ └── form-types.ts # TypeScript type definitions
-└── README.md
-\`\`\`
+The application uses Tailwind CSS for styling.
 
 ## Technical Decisions
 
